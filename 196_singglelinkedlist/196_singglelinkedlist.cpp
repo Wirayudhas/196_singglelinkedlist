@@ -86,5 +86,20 @@ bool listEmpty() {
 
 }
 
+void travarse() {
+	if (listEmpty()) {
+		cout << "List kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		Node* currentNode = START;
+		while (currentNode != NULL) {
+			cout << "NIM: " << currentNode->noMhs << ", Nama: " << currentNode->name << endl;
+			currentNode = currentNode->next;
+		}
+	}
+}
 
 
