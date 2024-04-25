@@ -47,5 +47,26 @@ void addNode() {
 	nodeBaru->next = nodeBaru;
 }
 
+bool searchNode(int nim, Node* current, Node* previous) {
+	previous = START;
+	current = START;
+	while (current != NULL && nim > current->noMhs)
+	{
+		previous = current;
+		current = START;
+	}
+	if (current == NULL)
+	{
+		return false;
+	}
+	else if (current->noMhs == nim)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 
 
